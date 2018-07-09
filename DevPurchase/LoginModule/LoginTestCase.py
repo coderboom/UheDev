@@ -2,6 +2,7 @@ import unittest
 import selenium
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common import keys
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
@@ -28,8 +29,9 @@ class TestLogin(unittest.TestCase):
         identify_code_element = '//*[@id="siginBoxCard"]/div[2]/form/div[3]/div/div[1]/div/div/div/input'
         loading_btn_element = 'isloading_btn'
         submenu_title_element = '/html/body/div[1]/div/div/div/div[2]/ul/li[4]/div'
-        
-        user_name_input = browser.find_element_by_id(user_name_element)
+
+        # user_name_input = browser.find_element_by_id(user_name_element)
+        user_name_input = browser.find_element(By.ID, user_name_element)
         user_name_input.is_displayed()
         user_pwd_input = browser.find_element_by_id(user_pwd_element)
         user_pwd_input.is_displayed()
@@ -54,7 +56,7 @@ class TestLogin(unittest.TestCase):
             print('登陆成功')
         else:
             print('登陆失败')
-        
+
     def tearDown(self):
         self.browser.quit()
 

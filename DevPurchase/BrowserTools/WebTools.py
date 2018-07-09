@@ -23,7 +23,6 @@ class WebTools(object):
     def Jumpwebpage(self, page, time_wait=3):
         self.driver.get(self.Getwebpage(page))
         self.driver.maximize_window()
-
         if isinstance(time_wait, int):
             time.sleep(time_wait)
 
