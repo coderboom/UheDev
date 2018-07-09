@@ -1,4 +1,4 @@
-import
+import HTMLTestRunner
 from DevPurchase.LoginModule import LoginTestCase
 import os
 import unittest
