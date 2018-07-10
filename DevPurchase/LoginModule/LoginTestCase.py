@@ -21,8 +21,8 @@ class TestLogin(unittest.TestCase):
         browser.maximize_window()
         browser.implicitly_wait(5)
 
-        user_name = 'lisisi'
-        user_pwd = 'aa2345'
+        user_name = 'lisi'
+        user_pwd = 'aa234'
 
         user_name_element = 'username'
         user_pwd_element = 'password'
